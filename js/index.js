@@ -1,0 +1,1 @@
+angular.module("ahpFuzzy", ["ui.bootstrap"]);
