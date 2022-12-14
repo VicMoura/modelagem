@@ -20,7 +20,7 @@ img {
 
 
 #imagemTopo{
-    height: 200px;
+    height: 300px;
     width: auto;
     margin-top: 50px;
     border-style: solid;
@@ -41,7 +41,7 @@ img {
     width: 200px;
     font-family: 'fonte';
     font-size: 30px;
-    margin-top: 50px;
+    margin-top: 100px;
     
 }
 
@@ -56,3 +56,13 @@ img {
     height: 50px;
     margin-top: 0px;
 }
+
+.selectQuantidadeExt{
+    display: flex;
+    justify-content: center;
+}
+
+hr.rounded {
+    border-top: 4px solid #bbb;
+    border-radius: 5px;
+  }

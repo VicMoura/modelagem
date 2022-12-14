@@ -1,0 +1,28 @@
+<div ng-controller='abrirFecharModal'>
+  <div class="modal-header">
+      <h4 class="modal-title" style="font-family: 'fonte'; font-size: 40px; text-align: center;" >EXTENSÕES</h4>
+  </div>
+    <div class="modal-body">
+      <div class="panel panel-default">
+          <div class="panel-body "> 
+            <div class="selectQuantidadeExt">
+              <h4 style="font-size: 20px;">Selecione a quantidade de extensões a serem inseridas:</h4>
+
+              <select ng-model="selectQuantidade.valor" ng-options="x for x in quantidade" ng-change="criarExtensoes()"></select>
+
+            </div>
+              
+            <div ng-if="selectQuantidade.valor !== null" ng-repeat="extensao in extensoesQt">
+               <h4>Digite o nome da {{extensao.id}}º extensão</h4>
+               <input type="text" name="userName" ng-model="extensao.name">
+            </div>
+
+
+          </div>
+      </div>
+    </div>
+    <div class="modal-footer">
+      <button ng-if="selectQuantidade.valor != null" class="btn btn-primary" id="botaoModalInformacoes" ng-click="prosseguirExtensao()">Salvar</button>
+      <button class="btn btn-danger" id="botaoModalInformacoes" ng-click="fechar()">Sair</button>
+    </div>
+</div>

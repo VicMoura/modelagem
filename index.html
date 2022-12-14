@@ -14,6 +14,7 @@
     <script src="js/index.js"></script>
     <script src="js/controllers/abrirFecharModal.js"></script>
 
+
     <script src="lib/ui-bootstrap-tpls-0.12.1.min.js"></script>
 
     <link href="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.1/css/bootstrap-combined.min.css" rel="stylesheet">
@@ -31,9 +32,7 @@
     </header>
 
     <div class="botoesInfoExplorar" ng-controller="abrirFecharModal">
-        <button type="button" class="btn btn-primary">AHP</button>
-        <button type="button" class="btn btn-primary">FUZZY</button>
-        <button type="button" class="btn btn-primary">AHP E FUZZY</button>
+        <button type="button" class="btn btn-primary"  ng-click="abrirModalExtensoes()">MODELAGEM</button>
         <button type="button" class="btn btn-primary" ng-click="abrirModalInformacoes()">INFORMAÇÕES</button>
     </div>
 

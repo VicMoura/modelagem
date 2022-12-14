@@ -1,0 +1,51 @@
+<div ng-controller="abrirFecharModal">
+    <div class="modal-header">
+        <h4 class="modal-title" style="font-family: 'fonte'; font-size: 40px; text-align: center;" >DADOS DAS EXTENSÕES</h4>
+    </div>
+    <div class="modal-body">
+        <div class="panel panel-default">
+            <div class="panel-body" style="text-align: center;"  ng-init="restoreStateExtensoes()">
+                <button class="btn btn-primary" id="botaoModalInformacoes" ng-click="mostrarOuNaoImagem()">Árvore de Decisão</button>
+                <img ng-if='mostrar === true' src="../css/img/arvoreDeDecisao.jpeg">
+                <h4 style="margin-top: 20px;">INSIRA OS DADOS PARA O MÉTODO</h4>
+                <hr class="rounded">
+                <div ng-repeat="extensao in extensoesQt" class="dadosExtensoes">
+                    <h5 style="margin-top: 20px;">EXTENSÃO {{extensao.name | uppercase}}</h5>
+                        <div class="input-group mb-3" style="margin-top: 20px;">
+                            <div class="input-group-prepend">
+                            <span class="input-group-text" id="inputGroup-sizing-default">Insira a importância entre 0 a 100 para o <strong>IMPACTO INTERNO</strong></span>
+                            </div>
+                            <input type="number" class="form-control" aria-label="Default" aria-describedby="inputGroup-sizing-default" ng-model="extensao.impactInterno" min="0" max="100">
+                        </div>
+
+                        <div class="input-group mb-3">
+                            <div class="input-group-prepend">
+                            <span class="input-group-text" id="inputGroup-sizing-default">Insira a importância entre 0 a 100 para o <strong>IMPACTO EXTERNO</strong></span>
+                            </div>
+                            <input ng-model="extensao.impactExterno" type="number" class="form-control" aria-label="Default" aria-describedby="inputGroup-sizing-default" min="0" max="100">
+                        </div>
+
+                        <div class="input-group mb-3">
+                            <div class="input-group-prepend">
+                            <span class="input-group-text" id="inputGroup-sizing-default">Insira a importância entre 0 a 100 para a <strong>FREQUÊNCIA DE MENÇÃO HONROSA</strong></span>
+                            </div>
+                            <input ng-model="extensao.freqMencHonr" type="number" class="form-control" aria-label="Default" aria-describedby="inputGroup-sizing-default" min="0" max="100">
+                        </div>
+
+                        <div class="input-group mb-3">
+                            <div class="input-group-prepend">
+                            <span class="input-group-text" id="inputGroup-sizing-default">Insira a <strong>QUANTIDADE DE APRESENTAÇÕES</strong></span>
+                            </div>
+                            <input ng-model="extensao.qtApresentacao" type="number" class="form-control" aria-label="Default" aria-describedby="inputGroup-sizing-default">
+                        </div>
+
+                        <hr class="rounded">
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal-footer" ng-init="restoreStateExtensoes()">
+        <button class="btn btn-primary" id="botaoModalInformacoes" ng-click="saveStateExtensoes(true)">Salvar</button>
+        <button class="btn btn-danger" id="botaoModalInformacoes" ng-click="fechar()">Sair</button>
+    </div>
+  </div>
